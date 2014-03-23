@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<pg-comp map="United States">
+  <overview>
+    Each player represents a power company, which works to supply electricity to cities.
+    During the game, each player buys power plants at auction, buys resources to produce
+    electricity in those power plants, and builds a network of cities to supply with
+    electricity from his power plants. In the end, the player who supplies the most cities
+    with power wins the game.
+  </overview>
+
+  <limits players="2">
+    <regions>3</regions>
+    <max-plants>4</max-plants>
+    <remove-cards>8</remove-cards>
+    <step-2>10</step-2>
+    <end-game>21</end-game>
+  </limits>
+
+  <limits players="3">
+    <regions>3</regions>
+    <max-plants>3</max-plants>
+    <remove-cards>8</remove-cards>
+    <step-2>7</step-2>
+    <end-game>17</end-game>
+  </limits>
+
+  <limits players="4">
+    <regions>4</regions>
+    <max-plants>3</max-plants>
+    <remove-cards>4</remove-cards>
+    <step-2>7</step-2>
+    <end-game>17</end-game>
+  </limits>
+
+  <limits players="5">
+    <regions>5</regions>
+    <max-plants>3</max-plants>
+    <remove-cards>0</remove-cards>
+    <step-2>7</step-2>
+    <end-game>15</end-game>
+  </limits>
+
+  <limits players="6">
+    <regions>6</regions>
+    <max-plants>3</max-plants>
+    <remove-cards>0</remove-cards>
+    <step-2>6</step-2>
+    <end-game>14</end-game>
+  </limits>
+
+  <preparation>
+    Place 3 coal on spaces 1 to 8; 3 oil on spaces 3 to 8; and 3 garbage on spaces 7 and 8;
+    1 uranium on each of the spaces 14 and 16.
+  </preparation>
+
+  <preparation>
+    Take the power plant cards numbered 03 to 10 and place them near the board in two rows.
+    In the upper row, place 03 to 06 in ascending order (actual market); in the lower row,
+    place power plants numbered 07 to 10 in ascending order (future market). Keep market in
+    ascending order as plants are added.
+  </preparation>
+
+  <preparation>
+    Remove the »Step 3« card and plant number 13 from the card deck, shuffle the remaining
+    power plant cards, and place them face down (plant supply). Place the »Step 3« card
+    face down under the stack and plant number 13 face down on top of the stack.
+  </preparation>
+
+  <notes step="1">
+    Every city can have only one house. The building cost for the first house is 10 Elektro.
+  </notes>
+
+  <notes step="2">
+    At the start of step 2, remove ONCE the lowest numbered power plant from the game and
+    replace it with a new one from the draw stack, rearranging the market as always.
+  </notes>
+
+  <notes step="2">
+    Two players can have houses in each city. The building price for the second connection
+    is 15 Elektro.
+  </notes>
+
+  <notes step="2">
+    If the »Step 3« card is drawn in phase 2 (Auction Power Plants), treat the card as the
+    highest power plant and place it at the end of the future market. Immediately shuffle
+    the draw stack with the remaining power plants (the power plants that were placed under
+    the draw stack during steps 1 and 2 of the game), and place it face down next to the
+    game board. Continue the auction of power plants and draw replacements as necessary
+    until all players have their chance to buy a new power plant or pass. After finishing
+    phase 2, remove the lowest numbered power plant and the »Step 3« card from the market
+    and do not draw replacements! Step 3 starts in phase 3.
+  </notes>
+
+  <notes step="2">
+    If the »Step 3« card is drawn in phase 4 (Building) for replacements of too small power
+    plants, remove this card and the smallest numbered power plant from the game and do not
+    draw replacements. Shuffle the draw stack with the remaining power plants and place it
+    face down next to the game board. Step 3 starts in phase 5.
+  </notes>
+
+  <notes step="2">
+    If the »Step 3« card is drawn in phase 5 (Bureaucracy), remove this card and the lowest
+    numbered power plant from the game and do not draw replacements. Shuffle the draw stack
+    with the remaining power plants and place it face down next to the game board. Use the
+    re-supply of resources for Step 2 a final time. Step 3 starts in phase 1 of the next
+    turn.
+  </notes>
+
+  <notes step="3">
+    During step 3, there are only 6 power plants in the power plant market and all of these
+    power plants are in the actual market and are available to be auctioned.
+  </notes>
+
+  <notes step="3">
+    Every city can have three houses. The building price for the third house is 20 Elektro.
+  </notes>
+
+  <notes step="3">
+    In phase 5, remove the smallest numbered power plant from the game and draw a
+    replacement from the draw stack. During the last rounds of the game, it is possible
+    that the draw stack becomes exhausted. The game continues and in each phase 5, the
+    players remove the smallest numbered power plant. It is possible to run out of power
+    plants if this goes on for several rounds.
+  </notes>
+
+  <notes>
+    In the first round of the game, each player must buy a power plant.  Players
+    re-determine the player order after auctioning the power plants (after phase 2).
+  </notes>
+
+  <notes>
+    If no power plant is sold in a round, the players remove the lowest numbered power
+    plant from the market, placing it back in the box, and replace it by drawing a power
+    plant from the draw stack. They then rearrange the market according to the rules.
+  </notes>
+
+  <notes>
+    If, at any time during the game, there is a power plant in the actual market with a
+    number equal to or lower than the number of cities any player has, it is immediately
+    removed from the game and replaced with a new card from the draw stack.
+  </notes>
+
+  <turn-order>
+    <turn>Determine player order</turn>
+    <turn order="std">Buy power plant</turn>
+    <turn order="rev">Buy raw materials</turn>
+    <turn order="rev">Build cities</turn>
+    <turn order="std">Bureaucracy</turn>
+  </turn-order>
+
+  <restock players="2" step="1">
+    <coal>3</coal><oil>2</oil><trash>1</trash><nuke>1</nuke>
+  </restock>
+
+  <restock players="2" step="2">
+    <coal>4</coal><oil>2</oil><trash>2</trash><nuke>1</nuke>
+  </restock>
+
+  <restock players="2" step="3">
+    <coal>3</coal><oil>4</oil><trash>3</trash><nuke>1</nuke>
+  </restock>
+
+  <restock players="3" step="1">
+    <coal>4</coal><oil>2</oil><trash>1</trash><nuke>1</nuke>
+  </restock>
+
+  <restock players="3" step="2">
+    <coal>5</coal><oil>3</oil><trash>2</trash><nuke>1</nuke>
+  </restock>
+
+  <restock players="3" step="3">
+    <coal>3</coal><oil>4</oil><trash>3</trash><nuke>1</nuke>
+  </restock>
+
+  <restock players="4" step="1">
+    <coal>5</coal><oil>3</oil><trash>2</trash><nuke>1</nuke>
+  </restock>
+
+  <restock players="4" step="2">
+    <coal>6</coal><oil>4</oil><trash>3</trash><nuke>2</nuke>
+  </restock>
+
+  <restock players="4" step="3">
+    <coal>4</coal><oil>5</oil><trash>4</trash><nuke>2</nuke>
+  </restock>
+
+  <restock players="5" step="1">
+    <coal>5</coal><oil>4</oil><trash>3</trash><nuke>2</nuke>
+  </restock>
+
+  <restock players="5" step="2">
+    <coal>7</coal><oil>5</oil><trash>3</trash><nuke>3</nuke>
+  </restock>
+
+  <restock players="5" step="3">
+    <coal>5</coal><oil>6</oil><trash>5</trash><nuke>2</nuke>
+  </restock>
+
+  <restock players="6" step="1">
+    <coal>7</coal><oil>5</oil><trash>3</trash><nuke>2</nuke>
+  </restock>
+
+  <restock players="6" step="2">
+    <coal>9</coal><oil>6</oil><trash>5</trash><nuke>3</nuke>
+  </restock>
+
+  <restock players="6" step="3">
+    <coal>6</coal><oil>7</oil><trash>6</trash><nuke>3</nuke>
+  </restock>
+</pg-comp>

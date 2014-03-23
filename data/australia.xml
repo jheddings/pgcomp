@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<pg-comp map="Australia">
+  <overview>
+    Australia does not have a single connected power network. Only in the populated regions
+    mainly in the south east are several cities connected to each other. Because of this,
+    players may connect to any city for a generally higher connection cost. Australia does
+    not use uranium for their power production, but they do mine huge amounts of the
+    material to sell to other countries. This offers a completely new game element, even
+    for experienced Power Grid players!
+  </overview>
+
+  <limits players="2">
+    <regions>3</regions>
+    <max-plants>4</max-plants>
+    <remove-cards>8</remove-cards>
+    <step-2>10</step-2>
+    <end-game>21</end-game>
+  </limits>
+
+  <limits players="3">
+    <regions>3</regions>
+    <max-plants>3</max-plants>
+    <remove-cards>8</remove-cards>
+    <step-2>7</step-2>
+    <end-game>17</end-game>
+  </limits>
+
+  <limits players="4">
+    <regions>4</regions>
+    <max-plants>3</max-plants>
+    <remove-cards>4</remove-cards>
+    <step-2>7</step-2>
+    <end-game>17</end-game>
+  </limits>
+
+  <limits players="5">
+    <regions>5</regions>
+    <max-plants>3</max-plants>
+    <remove-cards>0</remove-cards>
+    <step-2>7</step-2>
+    <end-game>15</end-game>
+  </limits>
+
+  <limits players="6">
+    <regions>5</regions>
+    <max-plants>3</max-plants>
+    <remove-cards>0</remove-cards>
+    <step-2>6</step-2>
+    <end-game>14</end-game>
+  </limits>
+
+  <preparation>
+    Resources begin at: coal 1 Elektro, oil 3 Elektro, garbage 4 Elektro.
+
+    There are no uranium spaces in the resource market. The uranium is sold in a separate
+    uranium market in Australia. At the start, all 12 spaces of the uranium market are
+    filled with 1 uranium each.
+
+    Before preparing the power plant deck, remove the nuclear power plant #17
+  </preparation>
+
+  <notes step="1">
+    Only the areas of the resource market for 1 to 8 Elektro are used.
+  </notes>
+
+  <notes step="2">
+    Only the areas of the resource market for 1 to 8 Elektro are used.
+  </notes>
+
+  <notes step="3">
+    All resources increase by 2 Elektro by moving tokens.  Market spaces for 1 and 2
+    Elektro are no longer used.
+  </notes>
+
+  <notes>
+    Players may connect any available city in the chosen game area for the specified cost
+    or general cost of 20 Elektro, plus building costs.
+
+    Uranium mines are not counted towards the plant limit per player and are considered
+    when determining the player order.  Sale proceeds in reverse player order. A player may
+    decide not to sell his uranium.  Players get money for selling uranium in the last
+    round of the game.
+  </notes>
+
+  <turn-order>
+    <turn>Determine player order</turn>
+    <turn order="std">Buy power plant</turn>
+    <turn order="rev">Buy raw materials</turn>
+    <turn order="rev">Build cities</turn>
+    <turn order="std">Bureaucracy</turn>
+  </turn-order>
+
+  <restock players="2" step="1">
+    <coal>3</coal><oil>1</oil><trash>1</trash><nuke>-1</nuke>
+  </restock>
+
+  <restock players="2" step="2">
+    <coal>5</coal><oil>2</oil><trash>2</trash><nuke>-2</nuke>
+  </restock>
+
+  <restock players="2" step="3">
+    <coal>4</coal><oil>3</oil><trash>3</trash><nuke>-3</nuke>
+  </restock>
+
+  <restock players="3" step="1">
+    <coal>4</coal><oil>1</oil><trash>1</trash><nuke>-1</nuke>
+  </restock>
+
+  <restock players="3" step="2">
+    <coal>6</coal><oil>2</oil><trash>2</trash><nuke>-2</nuke>
+  </restock>
+
+  <restock players="3" step="3">
+    <coal>4</coal><oil>3</oil><trash>3</trash><nuke>-3</nuke>
+  </restock>
+
+  <restock players="4" step="1">
+    <coal>4</coal><oil>2</oil><trash>2</trash><nuke>-2</nuke>
+  </restock>
+
+  <restock players="4" step="2">
+    <coal>7</coal><oil>3</oil><trash>3</trash><nuke>-2</nuke>
+  </restock>
+
+  <restock players="4" step="3">
+    <coal>5</coal><oil>4</oil><trash>4</trash><nuke>-4</nuke>
+  </restock>
+
+  <restock players="5" step="1">
+    <coal>5</coal><oil>3</oil><trash>3</trash><nuke>-2</nuke>
+  </restock>
+
+  <restock players="5" step="2">
+    <coal>9</coal><oil>3</oil><trash>3</trash><nuke>-3</nuke>
+  </restock>
+
+  <restock players="5" step="3">
+    <coal>6</coal><oil>5</oil><trash>5</trash><nuke>-5</nuke>
+  </restock>
+
+  <restock players="6" step="1">
+    <coal>7</coal><oil>3</oil><trash>3</trash><nuke>-3</nuke>
+  </restock>
+
+  <restock players="6" step="2">
+    <coal>10</coal><oil>5</oil><trash>5</trash><nuke>-3</nuke>
+  </restock>
+
+  <restock players="6" step="3">
+    <coal>7</coal><oil>6</oil><trash>6</trash><nuke>-6</nuke>
+  </restock>
+</pg-comp>
