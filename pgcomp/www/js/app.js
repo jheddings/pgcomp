@@ -20,50 +20,53 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
     .state('tab', {
       url: "/tab",
       abstract: true,
-      templateUrl: "templates/tabs.html"
+      templateUrl: "templates/tabs.html",
+      controller: 'TabCtrl'
     })
 
     // the pet tab has its own child nav-view and history
-    .state('tab.pet-index', {
-      url: '/pets',
+    .state('tab.home', {
+      url: '/home',
       views: {
-        'pets-tab': {
-          templateUrl: 'templates/pet-index.html',
-          controller: 'PetIndexCtrl'
+        'home-tab': {
+          templateUrl: 'templates/home.html',
+          controller: 'HomeCtrl'
         }
       }
     })
 
-    .state('tab.pet-detail', {
-      url: '/pet/:petId',
+    .state('tab.turn', {
+      url: '/turn',
       views: {
-        'pets-tab': {
-          templateUrl: 'templates/pet-detail.html',
-          controller: 'PetDetailCtrl'
+        'turn-tab': {
+          templateUrl: 'templates/turn.html',
+          controller: 'TurnCtrl'
         }
       }
     })
 
-    .state('tab.adopt', {
-      url: '/adopt',
+    .state('tab.payment', {
+      url: '/payment',
       views: {
-        'adopt-tab': {
-          templateUrl: 'templates/adopt.html'
+        'payment-tab': {
+          templateUrl: 'templates/payment.html',
+          controller: 'PaymentCtrl'
         }
       }
     })
 
-    .state('tab.about', {
-      url: '/about',
+    .state('tab.calculator', {
+      url: '/calculator',
       views: {
-        'about-tab': {
-          templateUrl: 'templates/about.html'
+        'calculator-tab': {
+          templateUrl: 'templates/calculator.html',
+          controller: 'CalculatorCtrl'
         }
       }
     });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/pets');
+  $urlRouterProvider.otherwise('/tab/home');
 
 });
 
