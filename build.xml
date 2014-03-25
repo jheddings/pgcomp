@@ -4,12 +4,13 @@
 
   <property name="src.xml" location="${basedir}/data" />
   <property name="src.style" location="${basedir}/xsl" />
-  <property name="src.html" location="${basedir}/html" />
+  <property name="src.html" location="${basedir}/www" />
 
   <property name="build.dir" location="${basedir}/build" />
-  <property name="build.html" location="${build.dir}/html" />
+  <property name="build.html" location="${build.dir}/www" />
 
   <property name="dist.dir" location="${basedir}/dist" />
+  <property name="dist.html" location="${basedir}/www" />
 
   <!-- ===================================================================== -->
   <target name="init">
@@ -22,6 +23,7 @@
 
   <!-- ===================================================================== -->
   <target name="build-ios" depends="build-html">
+    <phonegap command="build">ios</phonegap>
   </target>
 
   <!-- ===================================================================== -->
@@ -30,10 +32,6 @@
 
   <!-- ===================================================================== -->
   <target name="build-html" depends="init">
-    <!-- build all overview pages -->
-    <xslt basedir="${src.xml}" includes="*.xml" style="${src.style}/overview.xsl"
-     destdir="${build.html}" extension="_overview.html" />
-
     <!-- copy static html content -->
     <copy todir="${build.html}">
       <fileset dir="${src.html}" />
@@ -44,22 +42,41 @@
   <target name="rebuild" depends="clean,build" />
 
   <!-- ===================================================================== -->
-  <target name="run-ios" depends="build">
-    <!-- launch iOS simulator -->
+  <target name="ios" depends="build-ios">
+    <phonegap command="run">ios</phonegap>
   </target>
 
   <!-- ===================================================================== -->
-  <target name="run-android" depends="build">
-    <!-- launch iOS simulator -->
+  <target name="android" depends="build-android">
+    <!-- launch Android simulator -->
   </target>
 
   <!-- ===================================================================== -->
   <target name="dist" depends="build">
-    <mkdir dir="${build.dir}" />
+    <mkdir dir="${dist.dir}" />
+
+    <!-- create website version -->
+    <mkdir dir="${dist.html}" />
+    <copy todir="${dist.html}">
+      <fileset dir="${build.html}" />
+    </copy>
   </target>
 
   <!-- ===================================================================== -->
   <target name="clean">
     <delete dir="${build.dir}" />
   </target>
+
+  <!-- ===================================================================== -->
+  <macrodef name="phonegap">
+    <attribute name="dir" default="${basedir}" />
+    <attribute name="command" />
+    <text name="args" />
+
+    <sequential>
+      <exec executable="phonegap" dir="@{dir}" failonerror="true">
+        <arg line="@{command} @{args}" />
+      </exec>
+    </sequential>
+  </macrodef>
 </project>

@@ -2,12 +2,12 @@
 
 <widget id="com.heddway.pgcomp" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>PGCompanion</name>
+
   <description>
     A digital companion for the game Power Grid.
   </description>
 
-  <author email="TBD@noreply.com" href="http://noreply.com/">
-  </author>
+  <author email="TBD@noreply.com" href="http://noreply.com/"></author>
 
   <content src="index.html" />
 
