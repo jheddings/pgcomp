@@ -1,25 +1,9 @@
-angular.module('pgcomp.controllers', ['ionic'])
+angular.module('pgcomp', [])
 
-.controller('HomeCtrl', function($scope) {
-})
-
-.controller('TabCtrl', function($scope, $ionicSideMenuDelegate) {
-  $scope.leftButtons = [
-    {
-      type: 'button-positive',
-      content: '<i class="icon ion-navicon"></i>',
-      tap: function(e) {
-        $ionicSideMenuDelegate.toggleLeft($scope.$$childHead);
-      }
-    }
-  ];
-})
-
-.controller('TurnCtrl', function($scope) {
-})
-
-.controller('PaymentCtrl', function($scope) {
-})
-
-.controller('CalculatorCtrl', function($scope) {
-});
+.controller('MapListCtrl', ['$scope', '$http',
+  function ($scope, $http) {
+    $http.get('maps/index.json').success(function(data) {
+      $scope.maps = data;
+    });
+  }
+]);
