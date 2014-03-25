@@ -60,6 +60,10 @@
     <copy todir="${dist.html}">
       <fileset dir="${build.html}" />
     </copy>
+
+    <!-- create signed IPA and copy to dist -->
+
+    <!-- create signed APK and copy to dist -->
   </target>
 
   <!-- ===================================================================== -->

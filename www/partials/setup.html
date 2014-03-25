@@ -1,0 +1,31 @@
+<h1>Power Grid Companion</h1>
+
+<div class="well">
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <select ng-model="mapId">
+        <option value="{{map.id}}" ng-repeat="map in maps">{{map.name}}</option>
+      </select>
+    </div>
+    <div class="panel-footer">
+      <a href="#/quickref/{{mapId}}">Quick Reference</a>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <select ng-model="numPlayers">
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+    </div>
+    <div class="panel-footer">
+      <a href="#/play/{{mapId}}-{{numPlayers}}-0">Begin Game</a>
+    </div>
+  </div>
+
+</div>
