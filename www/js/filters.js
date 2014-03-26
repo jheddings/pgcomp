@@ -10,9 +10,9 @@ angular.module('pgcomp.filters', [])
 
 ////////////////////////////////////////////////////////////////////////////////
 // returns the desired index from the given array
-// {{ input | index:key }}
-.filter('index', function() {
-  return function(array, index) {
-    return array[index];
+// {{ input | select:key }}
+.filter('select', function() {
+  return function(array, key) {
+    return array[key];
   };
 });

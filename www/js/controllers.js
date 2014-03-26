@@ -20,9 +20,6 @@ angular.module('pgcomp.controllers', [])
 
     $http.get('maps/' + mapId + '.json').success(function(data) {
       $scope.map = data;
-
-      $scope.limits = _.findWhere(data.limits, {players: numPlayers});
-      $scope.restock = _.findWhere(data.restock, {players: numPlayers});
     });
 
     $scope.mapId = mapId;
