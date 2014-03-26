@@ -16,12 +16,14 @@ angular.module('pgcomp.controllers', [])
 .controller('QuickRefCtrl', ['$scope', '$routeParams', '$http',
   function ($scope, $routeParams, $http) {
     var mapId = $routeParams.mapId;
+    var numPlayers = $routeParams.numPlayers;
 
     $http.get('maps/' + mapId + '.json').success(function(data) {
       $scope.map = data;
     });
 
     $scope.mapId = mapId;
+    $scope.numPlayers = numPlayers;
   }
 ])
 
