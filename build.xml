@@ -72,6 +72,11 @@
   </target>
 
   <!-- ===================================================================== -->
+  <target name="distclean" depends="clean">
+    <delete dir="${dist.dir}" />
+  </target>
+
+  <!-- ===================================================================== -->
   <macrodef name="phonegap">
     <attribute name="dir" default="${basedir}" />
     <attribute name="command" />
