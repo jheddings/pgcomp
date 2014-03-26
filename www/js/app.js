@@ -1,14 +1,15 @@
 angular.module('pgcomp', [
   'ngRoute',
-  'pgcomp.controllers'
+  'pgcomp.controllers',
+  'pgcomp.filters'
 ])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.
 
     //---------------------------------------------------
-    when('/setup', {
-      templateUrl: 'partials/setup.html',
+    when('/maps', {
+      templateUrl: 'partials/maps.html',
       controller: 'MapListCtrl'
     }).
 
@@ -26,7 +27,7 @@ angular.module('pgcomp', [
 
     //---------------------------------------------------
     otherwise({
-      redirectTo: '/setup'
+      redirectTo: '/maps'
     });
 
 }]);

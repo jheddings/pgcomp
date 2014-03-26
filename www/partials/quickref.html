@@ -1,31 +1,75 @@
-<h1>{{map.name}}</h1>
+<h1>{{map.name}} - {{numPlayers}} Players</h1>
 
-<div class="panel panel-default">
-  <div class="panel-body">
-    {{map.overview}}
+
+
+<div class="row">
+  <div class="col-md-9">
+    <div class="panel panel-default">
+      <div class="panel-heading"><h2 class="panel-title">Introduction</h2></div>
+      <div class="panel-body">{{map.overview}}</div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <table class="table table-condensed">
+      <tr><th>Regions In Use</th><td>{{ map.limits | find:{players:numPlayers} | index:"regions" }}</td></tr>
+      <tr><th># Plant Cards Removed</th><td>{{ map.limits | find:{players:numPlayers} | index:"remove" }}</td></tr>
+      <tr><th>Max Plants per Player</th><td>{{ map.limits | find:{players:numPlayers} | index:"plants" }}</td></tr>
+      <tr><th>Cities to Begin Step 2</th><td>{{ map.limits | find:{players:numPlayers} | index:"step2" }}</td></tr>
+      <tr><th>Cities to End the Game</th><td>{{ map.limits | find:{players:numPlayers} | index:"endGame" }}</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-3">
+    <div class="panel panel-default">
+      <div class="panel-heading"><h2 class="panel-title">Turn Order</h2></div>
+      <div class="panel-body">
+        <ol><li ng-repeat="turn in map.turnOrder">{{turn}}</li></ol>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading"><h2 class="panel-title">Payments</h2></div>
+      <div class="panel-body">
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="panel panel-default">
+      <div class="panel-heading"><h2 class="panel-title">Restocking</h2></div>
+      <div class="panel-body">
+        <table class="table table-condensed">
+          <thead>
+            <tr><th>Step</th><th>1</th><th>2</th><th>3</th></tr>
+          </thead>
+          <tbody>
+            <tr><th>Coal</th><td>0</td><td>0</td><td>0</td></tr>
+            <tr><th>Oil</th><td>0</td><td>0</td><td>0</td></tr>
+            <tr><th>Trash</th><td>0</td><td>0</td><td>0</td></tr>
+            <tr><th>Nuke</th><td>0</td><td>0</td><td>0</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </div>
 
 <div class="panel panel-default">
   <div class="panel-heading"><h2 class="panel-title">Preparation</h2></div>
   <div class="panel-body">
-  </div>
-</div>
-
-<div class="panel panel-default">
-  <div class="panel-heading"><h2 class="panel-title">Limits</h2></div>
-  <div class="panel-body">
+    <dl class="list-group">
+      <dd ng-repeat="prep in map.preparation">{{prep}}</dd>
+    </dl>
   </div>
 </div>
 
 <div class="panel panel-default">
   <div class="panel-heading"><h2 class="panel-title">Remarks &amp; Exceptions</h2></div>
   <div class="panel-body">
-  </div>
-</div>
-
-<div class="panel panel-default">
-  <div class="panel-heading"><h2 class="panel-title">Restocking</h2></div>
-  <div class="panel-body">
+    <dl class="list-group">
+      <dd ng-repeat="note in map.notes">{{note}}</dd>
+    </dl>
   </div>
 </div>
