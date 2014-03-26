@@ -1,5 +1,7 @@
 <h1>{{map.name}} - {{numPlayers}} Players</h1>
 
+{{ map.limits | find:{players: numPlayers} }}
+
 <div class="row">
   <div class="col-md-9">
     <div class="panel panel-default">
