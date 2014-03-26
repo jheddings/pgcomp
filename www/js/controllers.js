@@ -1,25 +1,45 @@
-angular.module('pgcomp.controllers', ['ionic'])
+angular.module('pgcomp.controllers', [])
 
-.controller('HomeCtrl', function($scope) {
-})
+////////////////////////////////////////////////////////////////////////////////
+.controller('MapListCtrl', ['$scope', '$http',
+  function ($scope, $http) {
+    $http.get('maps/index.json').success(function(data) {
+      $scope.maps = data;
+    });
 
-.controller('TabCtrl', function($scope, $ionicSideMenuDelegate) {
-  $scope.leftButtons = [
-    {
-      type: 'button-positive',
-      content: '<i class="icon ion-navicon"></i>',
-      tap: function(e) {
-        $ionicSideMenuDelegate.toggleLeft($scope.$$childHead);
-      }
-    }
-  ];
-})
+    $scope.mapId = null;
+    $scope.numPlayers = 2;
+  }
+])
 
-.controller('TurnCtrl', function($scope) {
-})
+////////////////////////////////////////////////////////////////////////////////
+.controller('QuickRefCtrl', ['$scope', '$routeParams', '$http',
+  function ($scope, $routeParams, $http) {
+    var mapId = $routeParams.mapId;
+    var numPlayers = $routeParams.numPlayers;
 
-.controller('PaymentCtrl', function($scope) {
-})
+    $http.get('maps/' + mapId + '.json').success(function(data) {
+      $scope.map = data;
+    });
 
-.controller('CalculatorCtrl', function($scope) {
-});
+    $scope.mapId = mapId;
+    $scope.numPlayers = numPlayers;
+  }
+])
+
+////////////////////////////////////////////////////////////////////////////////
+.controller('WalkthroughCtrl', ['$scope', '$routeParams', '$http',
+  function ($scope, $routeParams, $http) {
+    var mapId = $routeParams.mapId;
+    var numPlayers = $routeParams.numPlayers;
+    var step = $routeParams.step;
+
+    $http.get('maps/' + mapId + '.json').success(function(data) {
+      $scope.map = data;
+    });
+
+    $scope.mapId = mapId;
+    $scope.numPlayers = numPlayers;
+    $scope.step = numPlayers;
+  }
+]);

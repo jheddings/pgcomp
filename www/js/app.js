@@ -1,59 +1,32 @@
+angular.module('pgcomp', [
+  'ngRoute',
+  'pgcomp.controllers'
+])
 
-angular.module('pgcomp', ['ionic', 'pgcomp.services', 'pgcomp.controllers'])
+.config(['$routeProvider', function($routeProvider) {
+  $routeProvider.
 
+    //---------------------------------------------------
+    when('/setup', {
+      templateUrl: 'partials/setup.html',
+      controller: 'MapListCtrl'
+    }).
 
-.config(function($stateProvider, $urlRouterProvider) {
+    //---------------------------------------------------
+    when('/quickref/:mapId-:numPlayers', {
+      templateUrl: 'partials/quickref.html',
+      controller: 'QuickRefCtrl'
+    }).
 
-  $stateProvider
+    //---------------------------------------------------
+    when('/play/:mapId-:numPlayers-:step', {
+      templateUrl: 'partials/walkthrough.html',
+      controller: 'WalkthroughCtrl'
+    }).
 
-    .state('tab', {
-      url: "/tab",
-      abstract: true,
-      templateUrl: "templates/tabs.html",
-      controller: 'TabCtrl'
-    })
-
-    .state('tab.home', {
-      url: '/home',
-      views: {
-        'home-tab': {
-          templateUrl: 'templates/home.html',
-          controller: 'HomeCtrl'
-        }
-      }
-    })
-
-    .state('tab.turn', {
-      url: '/turn',
-      views: {
-        'turn-tab': {
-          templateUrl: 'templates/turn.html',
-          controller: 'TurnCtrl'
-        }
-      }
-    })
-
-    .state('tab.payment', {
-      url: '/payment',
-      views: {
-        'payment-tab': {
-          templateUrl: 'templates/payment.html',
-          controller: 'PaymentCtrl'
-        }
-      }
-    })
-
-    .state('tab.calculator', {
-      url: '/calculator',
-      views: {
-        'calculator-tab': {
-          templateUrl: 'templates/calculator.html',
-          controller: 'CalculatorCtrl'
-        }
-      }
+    //---------------------------------------------------
+    otherwise({
+      redirectTo: '/setup'
     });
 
-  $urlRouterProvider.otherwise('/tab/home');
-
-});
-
+}]);

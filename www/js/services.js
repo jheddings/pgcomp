@@ -1,9 +1,9 @@
-angular.module('pgcomp.services', [])
+angular.module('pgcomp', ['ngResource'])
 
-/**
- */
-.factory('SomeService', function() {
-
-  // XXX is this where we would return map rules?
-
-});
+.factory('Map', ['$resource',
+  function($resource){
+    return $resource('maps/:mapName.json', {}, {
+      query: {method:'GET', params:{mapName:'maps'}, isArray:true}
+    });
+  }
+]);

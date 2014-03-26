@@ -1,0 +1,48 @@
+{
+  "name": "United States",
+  "overview": "Each player represents a power company, which works to supply electricity to cities.  During the game, each player buys power plants at auction, buys resources to produce electricity in those power plants, and builds a network of cities to supply with electricity from his power plants. In the end, the player who supplies the most cities with power wins the game.",
+
+  "limits": [
+    { "players": 2, "regions": 3, "plants": 4, "remove": 8, "step2": 10, "endGame": 21 },
+    { "players": 3, "regions": 3, "plants": 3, "remove": 8, "step2": 7,  "endGame": 17 },
+    { "players": 4, "regions": 4, "plants": 3, "remove": 4, "step2": 7,  "endGame": 17 },
+    { "players": 5, "regions": 5, "plants": 3, "remove": 0, "step2": 7,  "endGame": 15 },
+    { "players": 6, "regions": 6, "plants": 3, "remove": 0, "step2": 6,  "endGame": 14 }
+  ],
+
+  "preparation": [
+  ],
+
+  "turnOrder": [
+    "Determine player order",
+    "Buy power plant",
+    "Buy raw materials",
+    "Build cities",
+    "Bureaucracy"
+  ],
+
+  "restock": [
+    { "players": 2, "step": 1, "coal": 3, "oil": 2, "trash": 1, "nuke": 1 },
+    { "players": 2, "step": 2, "coal": 3, "oil": 2, "trash": 1, "nuke": 1 },
+    { "players": 2, "step": 3, "coal": 3, "oil": 2, "trash": 1, "nuke": 1 },
+
+    { "players": 3, "step": 1, "coal": 3, "oil": 2, "trash": 1, "nuke": 1 },
+    { "players": 3, "step": 2, "coal": 3, "oil": 2, "trash": 1, "nuke": 1 },
+    { "players": 3, "step": 3, "coal": 3, "oil": 2, "trash": 1, "nuke": 1 },
+
+    { "players": 4, "step": 1, "coal": 3, "oil": 2, "trash": 1, "nuke": 1 },
+    { "players": 4, "step": 2, "coal": 3, "oil": 2, "trash": 1, "nuke": 1 },
+    { "players": 4, "step": 3, "coal": 3, "oil": 2, "trash": 1, "nuke": 1 },
+
+    { "players": 5, "step": 1, "coal": 3, "oil": 2, "trash": 1, "nuke": 1 },
+    { "players": 5, "step": 2, "coal": 3, "oil": 2, "trash": 1, "nuke": 1 },
+    { "players": 5, "step": 3, "coal": 3, "oil": 2, "trash": 1, "nuke": 1 },
+
+    { "players": 6, "step": 1, "coal": 3, "oil": 2, "trash": 1, "nuke": 1 },
+    { "players": 6, "step": 2, "coal": 3, "oil": 2, "trash": 1, "nuke": 1 },
+    { "players": 6, "step": 3, "coal": 3, "oil": 2, "trash": 1, "nuke": 1 }
+  ],
+
+  "notes": [
+  ]
+}
