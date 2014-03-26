@@ -16,13 +16,13 @@ angular.module('pgcomp', [
     //---------------------------------------------------
     when('/quickref/:mapId-:numPlayers', {
       templateUrl: 'partials/quickref.html',
-      controller: 'QuickRefCtrl'
+      controller: 'MapDetailCtrl'
     }).
 
     //---------------------------------------------------
-    when('/play/:mapId-:numPlayers-:step', {
-      templateUrl: 'partials/walkthrough.html',
-      controller: 'WalkthroughCtrl'
+    when('/guide/:mapId-:numPlayers-0', {
+      templateUrl: 'partials/guide-0.html',
+      controller: 'MapDetailCtrl'
     }).
 
     //---------------------------------------------------
