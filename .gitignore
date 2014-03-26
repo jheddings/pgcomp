@@ -1,6 +1,5 @@
 *.keystore
 *.sw*
-platforms/^.*
-.idea
-build
-dist
+
+./build
+./dist
