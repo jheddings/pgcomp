@@ -2,8 +2,6 @@
 
 <project name="PG Companion" default="build" basedir=".">
 
-  <property name="src.xml" location="${basedir}/data" />
-  <property name="src.style" location="${basedir}/xsl" />
   <property name="src.html" location="${basedir}/www" />
 
   <property name="build.dir" location="${basedir}/build" />
@@ -33,6 +31,7 @@
   <!-- ===================================================================== -->
   <target name="build-html" depends="init">
     <!-- copy static html content -->
+    <!-- XXX we should point phonegap to this location -->
     <copy todir="${build.html}">
       <fileset dir="${src.html}" />
     </copy>
@@ -74,6 +73,10 @@
   <!-- ===================================================================== -->
   <target name="distclean" depends="clean">
     <delete dir="${dist.dir}" />
+
+    <!-- created by phonegap builds -->
+    <delete dir="${basedir}/merges" />
+    <delete dir="${basedir}/platforms/ios" />
   </target>
 
   <!-- ===================================================================== -->
