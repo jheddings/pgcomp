@@ -13,6 +13,14 @@ angular.module('pgcomp.filters', [])
 // {{ input | select:key }}
 .filter('select', function() {
   return function(array, key) {
+    if (array == undefined) {
+      return undefined;
+    }
+
+    if (array == null) {
+      return undefined;
+    }
+
     return array[key];
   };
 });

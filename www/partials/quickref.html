@@ -1,7 +1,5 @@
 <h1>{{map.name}} - {{numPlayers}} Players</h1>
 
-{{ map.limits | find:{players: numPlayers} }}
-
 <div class="row">
   <div class="col-md-9">
     <div class="panel panel-default">
@@ -11,11 +9,11 @@
   </div>
   <div class="col-md-3">
     <table class="table table-condensed">
-      <tr><th>Regions In Use</th><td>{{ map.limits | find:{players: numPlayers} | select:"regions" }}</td></tr>
-      <tr><th># Plant Cards Removed</th><td>{{ map.limits | find:{players: numPlayers} | select:"remove" }}</td></tr>
-      <tr><th>Max Plants per Player</th><td>{{ map.limits | find:{players: numPlayers} | select:"plants" }}</td></tr>
-      <tr><th>Cities to Begin Step 2</th><td>{{ map.limits | find:{players: numPlayers} | select:"step2" }}</td></tr>
-      <tr><th>Cities to End the Game</th><td>{{ map.limits | find:{players: numPlayers} | select:"endGame" }}</td></tr>
+      <tr><th>Regions In Use</th><td>{{ map.limits | find:{players:numPlayers} | select:"regions" }}</td></tr>
+      <tr><th># Plant Cards Removed</th><td>{{ map.limits | find:{players:numPlayers} | select:"remove" }}</td></tr>
+      <tr><th>Max Plants per Player</th><td>{{ map.limits | find:{players:numPlayers} | select:"plants" }}</td></tr>
+      <tr><th>Cities to Begin Step 2</th><td>{{ map.limits | find:{players:numPlayers} | select:"step2" }}</td></tr>
+      <tr><th>Cities to End the Game</th><td>{{ map.limits | find:{players:numPlayers} | select:"endGame" }}</td></tr>
     </table>
   </div>
 </div>
@@ -59,27 +57,27 @@
           <tbody>
             <tr>
               <th>Coal</th>
-              <td>{{ map.restock | find:{players: numPlayers, step: 1} | select:"coal" }}</td>
-              <td>{{ map.restock | find:{players: numPlayers, step: 2} | select:"coal" }}</td>
-              <td>{{ map.restock | find:{players: numPlayers, step: 3} | select:"coal" }}</td>
+              <td>{{ map.restock | find:{players:numPlayers, step:1} | select:"coal" }}</td>
+              <td>{{ map.restock | find:{players:numPlayers, step:2} | select:"coal" }}</td>
+              <td>{{ map.restock | find:{players:numPlayers, step:3} | select:"coal" }}</td>
             </tr>
             <tr>
               <th>Oil</th>
-              <td>{{ map.restock | find:{players: numPlayers, step: 1} | select:"oil" }}</td>
-              <td>{{ map.restock | find:{players: numPlayers, step: 2} | select:"oil" }}</td>
-              <td>{{ map.restock | find:{players: numPlayers, step: 3} | select:"oil" }}</td>
+              <td>{{ map.restock | find:{players:numPlayers, step:1} | select:"oil" }}</td>
+              <td>{{ map.restock | find:{players:numPlayers, step:2} | select:"oil" }}</td>
+              <td>{{ map.restock | find:{players:numPlayers, step:3} | select:"oil" }}</td>
             </tr>
             <tr>
               <th>Trash</th>
-              <td>{{ map.restock | find:{players: numPlayers, step: 1} | select:"trash" }}</td>
-              <td>{{ map.restock | find:{players: numPlayers, step: 2} | select:"trash" }}</td>
-              <td>{{ map.restock | find:{players: numPlayers, step: 3} | select:"trash" }}</td>
+              <td>{{ map.restock | find:{players:numPlayers, step:1} | select:"trash" }}</td>
+              <td>{{ map.restock | find:{players:numPlayers, step:2} | select:"trash" }}</td>
+              <td>{{ map.restock | find:{players:numPlayers, step:3} | select:"trash" }}</td>
             </tr>
             <tr>
               <th>Nuke</th>
-              <td>{{ map.restock | find:{players: numPlayers, step: 1} | select:"nuke" }}</td>
-              <td>{{ map.restock | find:{players: numPlayers, step: 2} | select:"nuke" }}</td>
-              <td>{{ map.restock | find:{players: numPlayers, step: 3} | select:"nuke" }}</td>
+              <td>{{ map.restock | find:{players:numPlayers, step:1} | select:"nuke" }}</td>
+              <td>{{ map.restock | find:{players:numPlayers, step:2} | select:"nuke" }}</td>
+              <td>{{ map.restock | find:{players:numPlayers, step:3} | select:"nuke" }}</td>
             </tr>
           </tbody>
         </table>

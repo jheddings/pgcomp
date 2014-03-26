@@ -16,7 +16,7 @@ angular.module('pgcomp.controllers', [])
 .controller('MapDetailCtrl', ['$scope', '$routeParams', '$http',
   function ($scope, $routeParams, $http) {
     var mapId = $routeParams.mapId;
-    var numPlayers = $routeParams.numPlayers;
+    var numPlayers = parseInt($routeParams.numPlayers);
 
     $http.get('maps/' + mapId + '.json').success(function(data) {
       $scope.map = data;
