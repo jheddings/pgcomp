@@ -16,7 +16,7 @@
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h2 class="panel-title">Play Along</h2>
+    <h2 class="panel-title">Game Guide</h2>
   </div>
 
   <div class="panel-body">
@@ -24,13 +24,13 @@
       <option value="{{map.id}}" ng-repeat="map in maps">{{map.name}}</option>
     </select>
 
-    <select ng-model="numPlayers">
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-    </select>
+    <div class="btn-group">
+      <button class="btn btn-primary" ng-model="numPlayers" btn-radio="2">2</button>
+      <button class="btn btn-primary" ng-model="numPlayers" btn-radio="3">3</button>
+      <button class="btn btn-primary" ng-model="numPlayers" btn-radio="4">4</button>
+      <button class="btn btn-primary" ng-model="numPlayers" btn-radio="5">5</button>
+      <button class="btn btn-primary" ng-model="numPlayers" btn-radio="6">6</button>
+    </div>
   </div>
 
   <div class="panel-footer">

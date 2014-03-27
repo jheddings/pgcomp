@@ -1,5 +1,6 @@
 angular.module('pgcomp', [
   'ngRoute',
+  'ui.bootstrap',
   'pgcomp.controllers',
   'pgcomp.filters'
 ])
@@ -8,8 +9,8 @@ angular.module('pgcomp', [
   $routeProvider.
 
     //---------------------------------------------------
-    when('/maps', {
-      templateUrl: 'partials/maps.html',
+    when('/select', {
+      templateUrl: 'partials/select.html',
       controller: 'MapListCtrl'
     }).
 
@@ -27,7 +28,7 @@ angular.module('pgcomp', [
 
     //---------------------------------------------------
     otherwise({
-      redirectTo: '/maps'
+      redirectTo: '/select'
     });
 
 }]);

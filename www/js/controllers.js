@@ -7,6 +7,7 @@ angular.module('pgcomp.controllers', [])
       $scope.maps = data;
     });
 
+    // TODO create service to save last selected values
     $scope.mapId = null;
     $scope.numPlayers = 2;
   }

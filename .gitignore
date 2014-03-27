@@ -1,5 +1,4 @@
 *.keystore
 *.sw*
-
 ./build
 ./dist
