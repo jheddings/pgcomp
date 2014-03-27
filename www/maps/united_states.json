@@ -14,19 +14,16 @@
     "preparation": [
         {
             "players": [2, 3, 4, 5, 6],
-            "step": [1, 2, 3],
             "content": "Place 3 coal on spaces 1 to 8; 3 oil on spaces 3 to 8; and 3 garbage on spaces 7 and 8; 1 uranium on each of the spaces 14 and 16."
         },
 
         {
             "players": [2, 3, 4, 5, 6],
-            "step": [1, 2, 3],
             "content": "Take the power plant cards numbered 03 to 10 and place them near the board in two rows.  In the upper row, place 03 to 06 in ascending order (actual market); in the lower row, place power plants numbered 07 to 10 in ascending order (future market). Keep market in ascending order as plants are added."
         },
 
         {
             "players": [2, 3, 4, 5, 6],
-            "step": [1, 2, 3],
             "content": "Remove the 'Step 3' card and plant number 13 from the card deck, shuffle the remaining power plant cards, and place them face down (plant supply). Place the 'Step 3' card face down under the stack and plant number 13 face down on top of the stack."
         }
     ],
