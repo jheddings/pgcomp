@@ -1,4 +1,10 @@
+# keystore files for deployments
 *.keystore
 *.sw*
-./build
-./dist
+
+# project folders & settings
+.idea
+
+# build folders
+/build
+/dist

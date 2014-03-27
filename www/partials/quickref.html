@@ -1,137 +1,167 @@
 <nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-        <span class="sr-only">Menu</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <span class="navbar-brand">{{map.name}}</span>
-    </div>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Menu</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="navbar-brand">{{map.name}}</span>
+        </div>
 
-    <ul class="nav navbar-nav">
-      <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown">{{numPlayers}} Players <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li ng-click="numPlayers = 2"><a class="nav-item">2</a></li>
-          <li ng-click="numPlayers = 3"><a class="nav-item">3</a></li>
-          <li ng-click="numPlayers = 4"><a class="nav-item">4</a></li>
-          <li ng-click="numPlayers = 5"><a class="nav-item">5</a></li>
-          <li ng-click="numPlayers = 6"><a class="nav-item">6</a></li>
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">{{numPlayers}} Players <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li ng-click="numPlayers = 2"><a class="nav-item">2</a></li>
+                    <li ng-click="numPlayers = 3"><a class="nav-item">3</a></li>
+                    <li ng-click="numPlayers = 4"><a class="nav-item">4</a></li>
+                    <li ng-click="numPlayers = 5"><a class="nav-item">5</a></li>
+                    <li ng-click="numPlayers = 6"><a class="nav-item">6</a></li>
+                </ul>
+            </li>
         </ul>
-      </li>
-    </ul>
 
-    <div class="collapse navbar-collapse" id="navbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#/select">Home</a></li>
-        <li><a href="#/select">Calculator</a></li>
-      </ul>
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#/select">Home</a></li>
+                <li><a href="#/select">Calculator</a></li>
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>
 
-<div class="row">
-  <div class="col-md-9">
-    <div class="panel panel-default">
-      <div class="panel-heading"><h2 class="panel-title">Introduction</h2></div>
-      <div class="panel-body">{{map.overview}}</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h2 class="panel-title">Introduction</h2></div>
+                <div class="panel-body notes">{{map.overview}}</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h2 class="panel-title">Limits</h2></div>
+                <div class="panel-body">
+                    <table class="table table-condensed">
+                        <tr>
+                            <th>Regions In Use</th>
+                            <td>{{ map.limits | find:{players:numPlayers} | select:"regions" }}</td>
+                        </tr>
+                        <tr>
+                            <th># Plant Cards Removed</th>
+                            <td>{{ map.limits | find:{players:numPlayers} | select:"remove" }}</td>
+                        </tr>
+                        <tr>
+                            <th>Max Plants per Player</th>
+                            <td>{{ map.limits | find:{players:numPlayers} | select:"plants" }}</td>
+                        </tr>
+                        <tr>
+                            <th>Cities to Begin Step 2</th>
+                            <td>{{ map.limits | find:{players:numPlayers} | select:"step2" }}</td>
+                        </tr>
+                        <tr>
+                            <th>Cities to End the Game</th>
+                            <td>{{ map.limits | find:{players:numPlayers} | select:"endGame" }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h2 class="panel-title">Turn Order</h2></div>
+                <div class="panel-body">
+                    <ol>
+                        <li ng-repeat="turn in map.turnOrder">{{turn}}</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="col-md-3">
-    <table class="table table-condensed">
-      <tr><th>Regions In Use</th><td>{{ map.limits | find:{players:numPlayers} | select:"regions" }}</td></tr>
-      <tr><th># Plant Cards Removed</th><td>{{ map.limits | find:{players:numPlayers} | select:"remove" }}</td></tr>
-      <tr><th>Max Plants per Player</th><td>{{ map.limits | find:{players:numPlayers} | select:"plants" }}</td></tr>
-      <tr><th>Cities to Begin Step 2</th><td>{{ map.limits | find:{players:numPlayers} | select:"step2" }}</td></tr>
-      <tr><th>Cities to End the Game</th><td>{{ map.limits | find:{players:numPlayers} | select:"endGame" }}</td></tr>
-    </table>
-  </div>
-</div>
 
-<div class="row">
-  <div class="col-md-3">
-    <div class="panel panel-default">
-      <div class="panel-heading"><h2 class="panel-title">Turn Order</h2></div>
-      <div class="panel-body">
-        <ol><li ng-repeat="turn in map.turnOrder">{{turn}}</li></ol>
-      </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h2 class="panel-title">Preparation</h2></div>
+                <div class="panel-body notes">
+                    <dl class="list-group">
+                        <dd ng-repeat="prep in map.preparation">{{prep}}</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h2 class="panel-title">Payments</h2></div>
+                <div class="panel-body">
+                    <table class="table table-condensed">
+                        <thead>
+                        <tr>
+                            <th>Bldg</th><th>E</th>
+                            <th>Bldg</th><th>E</th>
+                            <th>Bldg</th><th>E</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="idx in [0, 1, 2, 3, 4, 5, 6]">
+                            <td>{{ idx }}</td><td>{{ map.payments[idx] }}</td>
+                            <td>{{ idx + 7 }}</td><td>{{ map.payments[idx+7] }}</td>
+                            <td>{{ idx + 14 }}</td><td>{{ map.payments[idx+14] }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h2 class="panel-title">Restock</h2></div>
+                <div class="panel-body">
+                    <table class="table table-condensed">
+                        <thead>
+                        <tr><th>Step</th><th>1</th><th>2</th><th>3</th></tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th>Coal</th>
+                            <td>{{ map.restock | find:{players:numPlayers, step:1} | select:"coal" }}</td>
+                            <td>{{ map.restock | find:{players:numPlayers, step:2} | select:"coal" }}</td>
+                            <td>{{ map.restock | find:{players:numPlayers, step:3} | select:"coal" }}</td>
+                        </tr>
+                        <tr>
+                            <th>Oil</th>
+                            <td>{{ map.restock | find:{players:numPlayers, step:1} | select:"oil" }}</td>
+                            <td>{{ map.restock | find:{players:numPlayers, step:2} | select:"oil" }}</td>
+                            <td>{{ map.restock | find:{players:numPlayers, step:3} | select:"oil" }}</td>
+                        </tr>
+                        <tr>
+                            <th>Trash</th>
+                            <td>{{ map.restock | find:{players:numPlayers, step:1} | select:"trash" }}</td>
+                            <td>{{ map.restock | find:{players:numPlayers, step:2} | select:"trash" }}</td>
+                            <td>{{ map.restock | find:{players:numPlayers, step:3} | select:"trash" }}</td>
+                        </tr>
+                        <tr>
+                            <th>Nuke</th>
+                            <td>{{ map.restock | find:{players:numPlayers, step:1} | select:"nuke" }}</td>
+                            <td>{{ map.restock | find:{players:numPlayers, step:2} | select:"nuke" }}</td>
+                            <td>{{ map.restock | find:{players:numPlayers, step:3} | select:"nuke" }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="col-md-6">
-    <div class="panel panel-default">
-      <div class="panel-heading"><h2 class="panel-title">Payments</h2></div>
-      <div class="panel-body">
-        <table class="table">
-          <thead>
-            <tr><th>Bldg</th><th>E</th><th>Bldg</th><th>E</th><th>Bldg</th><th>E</th></tr>
-          </thead>
-          <tbody>
-            <tr ng-repeat="idx in [0, 1, 2, 3, 4, 5, 6]">
-              <td>{{ idx }}</td><td>{{ map.payments[idx] }}</td>
-              <td>{{ idx + 7 }}</td><td>{{ map.payments[idx+7] }}</td>
-              <td>{{ idx + 14 }}</td><td>{{ map.payments[idx+14] }}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-3">
-    <div class="panel panel-default">
-      <div class="panel-heading"><h2 class="panel-title">Restocking</h2></div>
-      <div class="panel-body">
-        <table class="table table-condensed">
-          <thead>
-            <tr><th>Step</th><th>1</th><th>2</th><th>3</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Coal</th>
-              <td>{{ map.restock | find:{players:numPlayers, step:1} | select:"coal" }}</td>
-              <td>{{ map.restock | find:{players:numPlayers, step:2} | select:"coal" }}</td>
-              <td>{{ map.restock | find:{players:numPlayers, step:3} | select:"coal" }}</td>
-            </tr>
-            <tr>
-              <th>Oil</th>
-              <td>{{ map.restock | find:{players:numPlayers, step:1} | select:"oil" }}</td>
-              <td>{{ map.restock | find:{players:numPlayers, step:2} | select:"oil" }}</td>
-              <td>{{ map.restock | find:{players:numPlayers, step:3} | select:"oil" }}</td>
-            </tr>
-            <tr>
-              <th>Trash</th>
-              <td>{{ map.restock | find:{players:numPlayers, step:1} | select:"trash" }}</td>
-              <td>{{ map.restock | find:{players:numPlayers, step:2} | select:"trash" }}</td>
-              <td>{{ map.restock | find:{players:numPlayers, step:3} | select:"trash" }}</td>
-            </tr>
-            <tr>
-              <th>Nuke</th>
-              <td>{{ map.restock | find:{players:numPlayers, step:1} | select:"nuke" }}</td>
-              <td>{{ map.restock | find:{players:numPlayers, step:2} | select:"nuke" }}</td>
-              <td>{{ map.restock | find:{players:numPlayers, step:3} | select:"nuke" }}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div class="panel panel-default">
-  <div class="panel-heading"><h2 class="panel-title">Preparation</h2></div>
-  <div class="panel-body">
-    <dl class="list-group">
-      <dd ng-repeat="prep in map.preparation">{{prep}}</dd>
-    </dl>
-  </div>
-</div>
 
-<div class="panel panel-default">
-  <div class="panel-heading"><h2 class="panel-title">Remarks &amp; Exceptions</h2></div>
-  <div class="panel-body">
-    <dl class="list-group">
-      <dd ng-repeat="note in map.notes">{{note}}</dd>
-    </dl>
-  </div>
+    <div class="panel panel-default">
+        <div class="panel-heading"><h2 class="panel-title">Remarks &amp; Exceptions</h2></div>
+        <div class="panel-body notes">
+            <dl class="list-group">
+                <dd ng-repeat="note in map.notes">{{note}}</dd>
+            </dl>
+        </div>
+    </div>
 </div>
