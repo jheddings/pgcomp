@@ -2,6 +2,8 @@
 
 <div class="panel panel-default">
   <ul class="nav">
-    <li><a href="#/quickref/{{map.id}}" ng-repeat="map in maps">{{map.name}}</a></li>
+    <li ng-repeat="map in maps">
+      <a href="#/quickref/{{map.id}}">{{map.name}}</a>
+    </li>
   </ul>
 </div>
