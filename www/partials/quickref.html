@@ -1,4 +1,33 @@
-<h1>{{map.name}} - {{numPlayers}} Players</h1>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Menu</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <span class="navbar-brand">{{map.name}} - {{numPlayers}} Players</span>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#/select">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown">Players <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li ng-click="numPlayers = 2"><a class="nav-item">2</a></li>
+            <li ng-click="numPlayers = 3"><a class="nav-item">3</a></li>
+            <li ng-click="numPlayers = 4"><a class="nav-item">4</a></li>
+            <li ng-click="numPlayers = 5"><a class="nav-item">5</a></li>
+            <li ng-click="numPlayers = 6"><a class="nav-item">6</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <div class="row">
   <div class="col-md-9">

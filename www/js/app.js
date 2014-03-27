@@ -15,14 +15,32 @@ angular.module('pgcomp', [
     }).
 
     //---------------------------------------------------
-    when('/quickref/:mapId-:numPlayers', {
+    when('/quickref/:mapId', {
       templateUrl: 'partials/quickref.html',
       controller: 'MapDetailCtrl'
     }).
 
     //---------------------------------------------------
-    when('/guide/:mapId-:numPlayers-0', {
-      templateUrl: 'partials/guide-0.html',
+    when('/guide/:mapId-:numPlayers-prep', {
+      templateUrl: 'partials/guide-prep.html',
+      controller: 'MapDetailCtrl'
+    }).
+
+    //---------------------------------------------------
+    when('/guide/:mapId-:numPlayers-step1', {
+      templateUrl: 'partials/guide-step-1.html',
+      controller: 'MapDetailCtrl'
+    }).
+
+    //---------------------------------------------------
+    when('/guide/:mapId-:numPlayers-step2', {
+      templateUrl: 'partials/guide-step-2.html',
+      controller: 'MapDetailCtrl'
+    }).
+
+    //---------------------------------------------------
+    when('/guide/:mapId-:numPlayers-step3', {
+      templateUrl: 'partials/guide-step-3.html',
       controller: 'MapDetailCtrl'
     }).
 

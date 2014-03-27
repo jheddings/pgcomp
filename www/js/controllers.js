@@ -6,10 +6,6 @@ angular.module('pgcomp.controllers', [])
     $http.get('maps/index.json').success(function(data) {
       $scope.maps = data;
     });
-
-    // TODO create service to save last selected values
-    $scope.mapId = null;
-    $scope.numPlayers = 2;
   }
 ])
 
@@ -17,7 +13,9 @@ angular.module('pgcomp.controllers', [])
 .controller('MapDetailCtrl', ['$scope', '$routeParams', '$http',
   function ($scope, $routeParams, $http) {
     var mapId = $routeParams.mapId;
-    var numPlayers = parseInt($routeParams.numPlayers);
+
+    // TODO use service to load last number of players
+    var numPlayers = 2;
 
     $http.get('maps/' + mapId + '.json').success(function(data) {
       $scope.map = data;
