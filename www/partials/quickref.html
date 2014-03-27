@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <span class="navbar-brand">{{map.name}} - {{numPlayers}} Players</span>
+      <span class="navbar-brand">{{map.name}}</span>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -15,7 +15,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#/select">Home</a></li>
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown">Players <b class="caret"></b></a>
+          <a class="dropdown-toggle" data-toggle="dropdown">{{numPlayers}} Players <b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li ng-click="numPlayers = 2"><a class="nav-item">2</a></li>
             <li ng-click="numPlayers = 3"><a class="nav-item">3</a></li>
