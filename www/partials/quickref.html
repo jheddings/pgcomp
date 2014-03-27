@@ -86,9 +86,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading"><h2 class="panel-title">Preparation</h2></div>
                 <div class="panel-body notes">
-                    <dl class="list-group">
-                        <dd ng-repeat="prep in map.preparation">{{prep}}</dd>
-                    </dl>
+                    <div ng-repeat="prep in map.preparation">{{prep}}</div>
                 </div>
             </div>
         </div>
@@ -159,9 +157,7 @@
     <div class="panel panel-default">
         <div class="panel-heading"><h2 class="panel-title">Remarks &amp; Exceptions</h2></div>
         <div class="panel-body notes">
-            <dl class="list-group">
-                <dd ng-repeat="note in map.notes">{{note}}</dd>
-            </dl>
+            <div ng-repeat="note in map.notes">{{note}}</div>
         </div>
     </div>
 </div>
