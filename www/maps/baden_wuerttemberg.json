@@ -1,0 +1,80 @@
+{
+    "name": "Baden-Württemberg",
+    "id": "baden_wuerttemberg",
+    "overview": "In Baden-Wuerttemberg, the clocks move differently: The main change focuses on the order of phases of a game round. First, you buy power plants, and then, you rearrange the player order. Furthermore, as this province is small, several transregional may only be connected starting in step 2.",
+
+    "limits": [
+        { "players": 2, "regionsInUse": 3, "maxPlantsPerPlayer": 4, "cardsToRemove": 8, "step2Trigger": 10, "endGameTrigger": 21 },
+        { "players": 3, "regionsInUse": 3, "maxPlantsPerPlayer": 3, "cardsToRemove": 8, "step2Trigger":  7, "endGameTrigger": 17 },
+        { "players": 4, "regionsInUse": 4, "maxPlantsPerPlayer": 3, "cardsToRemove": 4, "step2Trigger":  7, "endGameTrigger": 17 },
+        { "players": 5, "regionsInUse": 5, "maxPlantsPerPlayer": 3, "cardsToRemove": 0, "step2Trigger":  7, "endGameTrigger": 15 },
+        { "players": 6, "regionsInUse": 6, "maxPlantsPerPlayer": 3, "cardsToRemove": 0, "step2Trigger":  6, "endGameTrigger": 14 }
+    ],
+
+    "preparation": [
+        {
+            "players": [2, 3, 4, 5, 6],
+            "content": "During the first game round, the random player order will be rearranged regularly in phase 2 after buying power plants."
+        }
+    ],
+
+    "turnOrder": [
+        "Buy power plant",
+        "Determine order",
+        "Buy resources",
+        "Build cities",
+        "Bureaucracy"
+    ],
+
+    "payments": [
+        10, 22, 33, 44, 54, 64, 73, 82, 90, 98, 105, 112, 118, 124, 129, 134, 138, 142, 145, 148, 150
+    ],
+
+    "restock": [
+        { "players": 2, "step": 1, "coal": 3, "oil": 2, "trash": 1, "nuke": 1 },
+        { "players": 2, "step": 2, "coal": 4, "oil": 2, "trash": 2, "nuke": 1 },
+        { "players": 2, "step": 3, "coal": 3, "oil": 4, "trash": 3, "nuke": 1 },
+
+        { "players": 3, "step": 1, "coal": 4, "oil": 2, "trash": 1, "nuke": 1 },
+        { "players": 3, "step": 2, "coal": 5, "oil": 3, "trash": 2, "nuke": 1 },
+        { "players": 3, "step": 3, "coal": 3, "oil": 4, "trash": 3, "nuke": 1 },
+
+        { "players": 4, "step": 1, "coal": 5, "oil": 3, "trash": 2, "nuke": 1 },
+        { "players": 4, "step": 2, "coal": 6, "oil": 4, "trash": 3, "nuke": 2 },
+        { "players": 4, "step": 3, "coal": 4, "oil": 5, "trash": 4, "nuke": 2 },
+
+        { "players": 5, "step": 1, "coal": 5, "oil": 4, "trash": 3, "nuke": 2 },
+        { "players": 5, "step": 2, "coal": 7, "oil": 5, "trash": 3, "nuke": 3 },
+        { "players": 5, "step": 3, "coal": 5, "oil": 6, "trash": 5, "nuke": 2 },
+
+        { "players": 6, "step": 1, "coal": 7, "oil": 5, "trash": 3, "nuke": 2 },
+        { "players": 6, "step": 2, "coal": 9, "oil": 6, "trash": 5, "nuke": 3 },
+        { "players": 6, "step": 3, "coal": 6, "oil": 7, "trash": 6, "nuke": 3 }
+    ],
+
+    "notes": [
+        {
+            "players": [2, 3, 4, 5, 6],
+            "steps": [1],
+            "content": "The transregional cities (e.g. Strasbourg) are not available in step 1."
+        },
+
+        {
+            "players": [2, 3, 4, 5, 6],
+            "steps": [2, 3],
+            "content": "The transregional cities (e.g. Strasbourg) open their gates in »Step 2«. Players can only connect to them for 15 or 20 Elektro."
+        },
+
+        {
+            "players": [2, 3, 4, 5, 6],
+            "steps": [1, 2, 3],
+            "content": "If no power plant is sold in a round, the players remove the two lowest numbered power plants from the market, placing them back in the box, and replace them by drawing two power plants from the draw stack."
+        },
+
+        {
+            "players": [2, 3, 4, 5, 6],
+            "steps": [1, 2, 3],
+            "content": "If at any time during the game there is a power plant in the actual market with a number equal to or lower than the number of cities any player has, players do not remove it from the game!"
+        }
+    ]
+}

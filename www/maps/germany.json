@@ -1,6 +1,6 @@
 {
-    "name": "United States",
-    "id": "united_states",
+    "name": "Germany",
+    "id": "germany",
     "overview": "Each player represents a power company, which works to supply electricity to cities.  During the game, each player buys power plants at auction, buys resources to produce electricity in those power plants, and builds a network of cities to supply with electricity from his power plants. In the end, the player who supplies the most cities with power wins the game.",
 
     "limits": [

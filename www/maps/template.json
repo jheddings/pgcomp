@@ -1,0 +1,62 @@
+{
+    "name": "Map Name",
+    "id": "friendly_map_id",
+    "overview": "Introduction to this map.",
+
+    "limits": [
+        { "players": 2, "regionsInUse": 3, "maxPlantsPerPlayer": 4, "cardsToRemove": 8, "step2Trigger": 10, "endGameTrigger": 21 },
+        { "players": 3, "regionsInUse": 3, "maxPlantsPerPlayer": 3, "cardsToRemove": 8, "step2Trigger":  7, "endGameTrigger": 17 },
+        { "players": 4, "regionsInUse": 4, "maxPlantsPerPlayer": 3, "cardsToRemove": 4, "step2Trigger":  7, "endGameTrigger": 17 },
+        { "players": 5, "regionsInUse": 5, "maxPlantsPerPlayer": 3, "cardsToRemove": 0, "step2Trigger":  7, "endGameTrigger": 15 },
+        { "players": 6, "regionsInUse": 6, "maxPlantsPerPlayer": 3, "cardsToRemove": 0, "step2Trigger":  6, "endGameTrigger": 14 }
+    ],
+
+    "preparation": [
+        {
+            "players": [2, 3, 4, 5, 6],
+            "content": "Preparation for this map based on number of players."
+        }
+    ],
+
+    "turnOrder": [
+        "Determine order",
+        "Buy power plant",
+        "Buy resources",
+        "Build cities",
+        "Bureaucracy"
+    ],
+
+    "payments": [
+        10, 22, 33, 44, 54, 64, 73, 82, 90, 98, 105, 112, 118, 124, 129, 134, 138, 142, 145, 148, 150
+    ],
+
+    "restock": [
+        { "players": 2, "step": 1, "coal": 0, "oil": 0, "trash": 0, "nuke": 0 },
+        { "players": 2, "step": 2, "coal": 0, "oil": 0, "trash": 0, "nuke": 0 },
+        { "players": 2, "step": 3, "coal": 0, "oil": 0, "trash": 0, "nuke": 0 },
+
+        { "players": 3, "step": 1, "coal": 0, "oil": 0, "trash": 0, "nuke": 0 },
+        { "players": 3, "step": 2, "coal": 0, "oil": 0, "trash": 0, "nuke": 0 },
+        { "players": 3, "step": 3, "coal": 0, "oil": 0, "trash": 0, "nuke": 0 },
+
+        { "players": 4, "step": 1, "coal": 0, "oil": 0, "trash": 0, "nuke": 0 },
+        { "players": 4, "step": 2, "coal": 0, "oil": 0, "trash": 0, "nuke": 0 },
+        { "players": 4, "step": 3, "coal": 0, "oil": 0, "trash": 0, "nuke": 0 },
+
+        { "players": 5, "step": 1, "coal": 0, "oil": 0, "trash": 0, "nuke": 0 },
+        { "players": 5, "step": 2, "coal": 0, "oil": 0, "trash": 0, "nuke": 0 },
+        { "players": 5, "step": 3, "coal": 0, "oil": 0, "trash": 0, "nuke": 0 },
+
+        { "players": 6, "step": 1, "coal": 0, "oil": 0, "trash": 0, "nuke": 0 },
+        { "players": 6, "step": 2, "coal": 0, "oil": 0, "trash": 0, "nuke": 0 },
+        { "players": 6, "step": 3, "coal": 0, "oil": 0, "trash": 0, "nuke": 0 }
+    ],
+
+    "notes": [
+        {
+            "players": [2, 3, 4, 5, 6],
+            "steps": [1, 2, 3],
+            "content": "Remarks or exceptions based on players & step."
+        }
+    ]
+}

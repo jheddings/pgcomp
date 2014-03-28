@@ -5,8 +5,28 @@
   },
 
   {
+    "name": "Baden-Württemberg",
+    "id": "baden_wuerttemberg"
+  },
+
+  {
     "name": "Germany",
     "id": "germany"
+  },
+
+  {
+    "name": "Indian Subcontinent",
+    "id": "india"
+  },
+
+  {
+    "name": "Korea",
+    "id": "korea"
+  },
+
+  {
+    "name": "Québec",
+    "id": "quebec"
   },
 
   {

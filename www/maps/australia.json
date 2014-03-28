@@ -1,0 +1,100 @@
+{
+    "name": "Australia",
+    "id": "australia",
+    "overview": "Australia does not have a single connected power network. Only in the populated regions, mainly in the south east are several cities connected to each other. Because of this, players may connect to any city for a generally higher connection cost. Australia does not use uranium for their power production, but they do mine huge amounts of the material to sell to other countries. This offers a completely new game element, even for experienced Power Grid players!",
+
+    "limits": [
+        { "players": 2, "regionsInUse": 3, "maxPlantsPerPlayer": 4, "cardsToRemove": 8, "step2Trigger": 10, "endGameTrigger": 21 },
+        { "players": 3, "regionsInUse": 3, "maxPlantsPerPlayer": 3, "cardsToRemove": 8, "step2Trigger":  7, "endGameTrigger": 17 },
+        { "players": 4, "regionsInUse": 4, "maxPlantsPerPlayer": 3, "cardsToRemove": 4, "step2Trigger":  7, "endGameTrigger": 17 },
+        { "players": 5, "regionsInUse": 5, "maxPlantsPerPlayer": 3, "cardsToRemove": 0, "step2Trigger":  7, "endGameTrigger": 15 },
+        { "players": 6, "regionsInUse": 5, "maxPlantsPerPlayer": 3, "cardsToRemove": 0, "step2Trigger":  6, "endGameTrigger": 14 }
+    ],
+
+    "preparation": [
+        {
+            "players": [2, 3, 4, 5, 6],
+            "content": "Resources begin at: coal 1 Elektro, oil 3 Elektro, garbage 4 Elektro."
+        },
+
+        {
+            "players": [2, 3, 4, 5, 6],
+            "content": "There are no uranium spaces in the resource market. The uranium is sold in a separate uranium market in Australia. At the start, all 12 spaces of the uranium market are filled with 1 uranium each."
+        },
+
+        {
+            "players": [2, 3, 4, 5, 6],
+            "content": "Before preparing the power plant deck, remove the nuclear power plant #17."
+        },
+
+        {
+            "players": [2, 3, 4],
+            "content": "With 2 to 4 players you may choose the matching number of regions in Australia, the chosen regions do not need to be adjacent!"
+        },
+
+        {
+            "players": [5, 6],
+            "content": "Australia only has 5 regions. In games with 5 or 6 players you always play on the whole map."
+        }
+    ],
+
+    "turnOrder": [
+        "Determine order",
+        "Buy power plant",
+        "Buy resources",
+        "Build cities",
+        "Bureaucracy"
+    ],
+
+    "payments": [
+        10, 22, 33, 44, 54, 64, 73, 82, 90, 98, 105, 112, 118, 124, 129, 134, 138, 142, 145, 148, 150
+    ],
+
+    "restock": [
+        { "players": 2, "step": 1, "coal":  3, "oil": 1, "trash": 1, "nuke": -1 },
+        { "players": 2, "step": 2, "coal":  5, "oil": 2, "trash": 2, "nuke": -2 },
+        { "players": 2, "step": 3, "coal":  4, "oil": 3, "trash": 3, "nuke": -3 },
+
+        { "players": 3, "step": 1, "coal":  4, "oil": 1, "trash": 1, "nuke": -1 },
+        { "players": 3, "step": 2, "coal":  6, "oil": 2, "trash": 2, "nuke": -2 },
+        { "players": 3, "step": 3, "coal":  4, "oil": 3, "trash": 3, "nuke": -3 },
+
+        { "players": 4, "step": 1, "coal":  4, "oil": 2, "trash": 2, "nuke": -2 },
+        { "players": 4, "step": 2, "coal":  7, "oil": 3, "trash": 3, "nuke": -2 },
+        { "players": 4, "step": 3, "coal":  5, "oil": 4, "trash": 4, "nuke": -4 },
+
+        { "players": 5, "step": 1, "coal":  5, "oil": 3, "trash": 3, "nuke": -2 },
+        { "players": 5, "step": 2, "coal":  9, "oil": 3, "trash": 3, "nuke": -3 },
+        { "players": 5, "step": 3, "coal":  6, "oil": 5, "trash": 5, "nuke": -5 },
+
+        { "players": 6, "step": 1, "coal":  7, "oil": 3, "trash": 3, "nuke": -3 },
+        { "players": 6, "step": 2, "coal": 10, "oil": 5, "trash": 5, "nuke": -3 },
+        { "players": 6, "step": 3, "coal":  7, "oil": 6, "trash": 6, "nuke": -6 }
+    ],
+
+    "notes": [
+        {
+            "players": [2, 3, 4, 5, 6],
+            "steps": [1, 2],
+            "content": "In »Step 1« and »Step 2« of the game only the areas of the resource market for 1 to 8 Elektro are used."
+        },
+
+        {
+            "players": [2, 3, 4, 5, 6],
+            "steps": [3],
+            "content": "At the start of »Step 3« all resources increase by 2 Elektro by moving tokens.  Market spaces for 1 and 2 Elektro are not used in this step."
+        },
+
+        {
+            "players": [2, 3, 4, 5, 6],
+            "steps": [1, 2, 3],
+            "content": "Players may connect any available city in the chosen game area for the specified cost or general cost of 20 Elektro, plus building costs."
+        },
+
+        {
+            "players": [2, 3, 4, 5, 6],
+            "steps": [1, 2, 3],
+            "content": "Uranium mines are not counted towards the plant limit per player and are considered when determining the player order.  Sale proceeds in reverse player order. A player may decide not to sell his uranium.  Players get money for selling uranium in the last round of the game."
+        }
+    ]
+}
