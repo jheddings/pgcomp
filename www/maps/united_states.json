@@ -4,11 +4,11 @@
     "overview": "Each player represents a power company, which works to supply electricity to cities.  During the game, each player buys power plants at auction, buys resources to produce electricity in those power plants, and builds a network of cities to supply with electricity from his power plants. In the end, the player who supplies the most cities with power wins the game.",
 
     "limits": [
-        { "players": 2, "regions": 3, "plants": 4, "remove": 8, "step2": 10, "endGame": 21 },
-        { "players": 3, "regions": 3, "plants": 3, "remove": 8, "step2": 7, "endGame": 17 },
-        { "players": 4, "regions": 4, "plants": 3, "remove": 4, "step2": 7, "endGame": 17 },
-        { "players": 5, "regions": 5, "plants": 3, "remove": 0, "step2": 7, "endGame": 15 },
-        { "players": 6, "regions": 6, "plants": 3, "remove": 0, "step2": 6, "endGame": 14 }
+        { "players": 2, "regionsInUse": 3, "maxPlantsPerPlayer": 4, "cardsToRemove": 8, "step2Trigger": 10, "endGameTrigger": 21 },
+        { "players": 3, "regionsInUse": 3, "maxPlantsPerPlayer": 3, "cardsToRemove": 8, "step2Trigger": 7, "endGameTrigger": 17 },
+        { "players": 4, "regionsInUse": 4, "maxPlantsPerPlayer": 3, "cardsToRemove": 4, "step2Trigger": 7, "endGameTrigger": 17 },
+        { "players": 5, "regionsInUse": 5, "maxPlantsPerPlayer": 3, "cardsToRemove": 0, "step2Trigger": 7, "endGameTrigger": 15 },
+        { "players": 6, "regionsInUse": 6, "maxPlantsPerPlayer": 3, "cardsToRemove": 0, "step2Trigger": 6, "endGameTrigger": 14 }
     ],
 
     "preparation": [
@@ -37,9 +37,7 @@
     ],
 
     "payments": [
-        10, 22, 33, 44, 54, 64, 73,
-        82, 90, 98, 105, 112, 118, 124,
-        129, 134, 138, 142, 145, 148, 150
+        10, 22, 33, 44, 54, 64, 73, 82, 90, 98, 105, 112, 118, 124, 129, 134, 138, 142, 145, 148, 150
     ],
 
     "restock": [
@@ -91,49 +89,49 @@
 
         {
             "players": [2, 3, 4, 5, 6],
-            "step": 2,
+            "step": [2],
             "content": "At the start of step 2, remove ONCE the lowest numbered power plant from the game and replace it with a new one from the draw stack, rearranging the market as always."
         },
 
         {
             "players": [2, 3, 4, 5, 6],
-            "step": 2,
+            "step": [2],
             "content": "Two players can have houses in each city. The building price for the second connection is 15 Elektro."
         },
 
         {
             "players": [2, 3, 4, 5, 6],
-            "step": 2,
+            "step": [2],
             "content": "If the 'Step 3' card is drawn in phase 2 (Auction Power Plants), treat the card as the highest power plant and place it at the end of the future market. Immediately shuffle the draw stack with the remaining power plants (the power plants that were placed under the draw stack during steps 1 and 2 of the game), and place it face down next to the game board. Continue the auction of power plants and draw replacements as necessary until all players have their chance to buy a new power plant or pass. After finishing phase 2, remove the lowest numbered power plant and the 'Step 3' card from the market and do not draw replacements! Step 3 starts in phase 3."
         },
 
         {
             "players": [2, 3, 4, 5, 6],
-            "step": 2,
+            "step": [2],
             "content": "If the 'Step 3' card is drawn in phase 4 (Building) for replacements of too small power plants, remove this card and the smallest numbered power plant from the game and do not draw replacements. Shuffle the draw stack with the remaining power plants and place it face down next to the game board. Step 3 starts in phase 5."
         },
 
         {
             "players": [2, 3, 4, 5, 6],
-            "step": 2,
+            "step": [2],
             "content": "If the 'Step 3' card is drawn in phase 5 (Bureaucracy), remove this card and the lowest numbered power plant from the game and do not draw replacements. Shuffle the draw stack with the remaining power plants and place it face down next to the game board. Use the re-supply of resources for Step 2 a final time. Step 3 starts in phase 1 of the next turn."
         },
 
         {
             "players": [2, 3, 4, 5, 6],
-            "step": 3,
+            "step": [3],
             "content": "During step 3, there are only 6 power plants in the power plant market and all of these power plants are in the actual market and are available to be auctioned."
         },
 
         {
             "players": [2, 3, 4, 5, 6],
-            "step": 3,
+            "step": [3],
             "content": "Every city can have three houses. The building price for the third house is 20 Elektro."
         },
 
         {
             "players": [2, 3, 4, 5, 6],
-            "step": 3,
+            "step": [3],
             "content": "In phase 5, remove the smallest numbered power plant from the game and draw a replacement from the draw stack. During the last rounds of the game, it is possible that the draw stack becomes exhausted. The game continues and in each phase 5, the players remove the smallest numbered power plant. It is possible to run out of power plants if this goes on for several rounds."
         }
     ]
