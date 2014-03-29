@@ -10,6 +10,21 @@
   },
 
   {
+    "name": "Belenux",
+    "id": "benelux"
+  },
+
+  {
+    "name": "Brazil",
+    "id": "brazil"
+  },
+
+  {
+    "name": "Central Europe",
+    "id": "central_europe"
+  },
+
+  {
     "name": "Germany",
     "id": "germany"
   },
@@ -27,6 +42,11 @@
   {
     "name": "Québec",
     "id": "quebec"
+  },
+
+  {
+    "name": "Spain & Portugal",
+    "id": "spain_portugal"
   },
 
   {

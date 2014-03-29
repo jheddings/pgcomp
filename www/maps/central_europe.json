@@ -1,0 +1,68 @@
+{
+    "name": "Central Europe",
+    "id": "central_europe",
+    "overview": "Due to the large coal deposits in Poland, the re-supply of coal is larger than in the original game, making coal power plants cheaper to run. Due to their political stands, neither Poland nor Austria will build nuclear power plants. So, a player may only acquire (or even bid on) a nuclear plant when he has cities in at least one of the other three countries. The city of Wien has a special status as it gets all its power from burning garbage - often garbage other countries pay it to take. These changes will offer players new strategies and tactics for this game.",
+
+    "limits": [
+        { "players": 2, "regionsInUse": 3, "maxPlantsPerPlayer": 4, "cardsToRemove": 8, "step2Trigger": 10, "endGameTrigger": 21 },
+        { "players": 3, "regionsInUse": 3, "maxPlantsPerPlayer": 3, "cardsToRemove": 8, "step2Trigger":  7, "endGameTrigger": 17 },
+        { "players": 4, "regionsInUse": 4, "maxPlantsPerPlayer": 3, "cardsToRemove": 4, "step2Trigger":  7, "endGameTrigger": 17 },
+        { "players": 5, "regionsInUse": 5, "maxPlantsPerPlayer": 3, "cardsToRemove": 0, "step2Trigger":  7, "endGameTrigger": 15 },
+        { "players": 6, "regionsInUse": 6, "maxPlantsPerPlayer": 3, "cardsToRemove": 0, "step2Trigger":  6, "endGameTrigger": 14 }
+    ],
+
+    "preparation": [
+        {
+            "players": [2, 3, 4, 5, 6],
+            "content": "3 each coal on spaces 1 through 8, 3 each oil on spaces 3 through 8, 3 each garbage on spaces 7 and 8, and 1 each uranium on spaces 8 through 16."
+        }
+    ],
+
+    "turnOrder": [
+        "Determine order",
+        "Buy power plant",
+        "Buy resources",
+        "Build cities",
+        "Bureaucracy"
+    ],
+
+    "payments": [
+        10, 22, 33, 44, 54, 64, 73, 82, 90, 98, 105, 112, 118, 124, 129, 134, 138, 142, 145, 148, 150
+    ],
+
+    "restock": [
+        { "players": 2, "step": 1, "coal":  4, "oil": 1, "trash": 1, "nuke": 1 },
+        { "players": 2, "step": 2, "coal":  5, "oil": 2, "trash": 3, "nuke": 1 },
+        { "players": 2, "step": 3, "coal":  3, "oil": 3, "trash": 3, "nuke": 1 },
+
+        { "players": 3, "step": 1, "coal":  5, "oil": 2, "trash": 1, "nuke": 1 },
+        { "players": 3, "step": 2, "coal":  6, "oil": 2, "trash": 3, "nuke": 1 },
+        { "players": 3, "step": 3, "coal":  3, "oil": 3, "trash": 3, "nuke": 1 },
+
+        { "players": 4, "step": 1, "coal":  6, "oil": 2, "trash": 2, "nuke": 1 },
+        { "players": 4, "step": 2, "coal":  7, "oil": 3, "trash": 4, "nuke": 2 },
+        { "players": 4, "step": 3, "coal":  5, "oil": 4, "trash": 4, "nuke": 1 },
+
+        { "players": 5, "step": 1, "coal":  7, "oil": 3, "trash": 3, "nuke": 2 },
+        { "players": 5, "step": 2, "coal":  8, "oil": 4, "trash": 4, "nuke": 2 },
+        { "players": 5, "step": 3, "coal":  5, "oil": 5, "trash": 5, "nuke": 2 },
+
+        { "players": 6, "step": 1, "coal":  8, "oil": 4, "trash": 3, "nuke": 2 },
+        { "players": 6, "step": 2, "coal": 10, "oil": 5, "trash": 6, "nuke": 3 },
+        { "players": 6, "step": 3, "coal":  6, "oil": 6, "trash": 6, "nuke": 2 }
+    ],
+
+    "notes": [
+        {
+            "players": [2, 3, 4, 5, 6],
+            "steps": [1, 2, 3],
+            "content": "A player may only bid on (and buy) a nuclear power plant when his network has at least one city in Hungary, Czech Republic, or Slovakia."
+        },
+
+        {
+            "players": [2, 3, 4, 5, 6],
+            "steps": [1, 2, 3],
+            "content": "A player whose network includes the city of Wien buys garbage at a discount of 1 Elektro per piece with the stipulation that his cost per piece may not be 0."
+        }
+    ]
+}
