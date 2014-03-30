@@ -11,7 +11,12 @@
   <property name="dist.html" location="${basedir}/www" />
 
   <!-- ===================================================================== -->
-  <target name="init">
+  <target name="depends">
+    <!-- TODO install required packages -->
+  </target>
+
+  <!-- ===================================================================== -->
+  <target name="build-init">
     <mkdir dir="${build.dir}" />
     <mkdir dir="${build.html}" />
   </target>
@@ -29,8 +34,9 @@
   </target>
 
   <!-- ===================================================================== -->
-  <target name="build-html" depends="init">
+  <target name="build-html" depends="build-init">
     <!-- copy static html content -->
+    <!-- TODO run minify in build area -->
     <!-- XXX we should point phonegap to this location -->
     <copy todir="${build.html}">
       <fileset dir="${src.html}" />
