@@ -27,13 +27,13 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-            <div class="panel panel-default">
+            <div class="panel panel-default" id="introduction-panel">
                 <div class="panel-heading"><h2 class="panel-title">Introduction</h2></div>
                 <div class="panel-body notes">{{map.overview}}</div>
             </div>
         </div>
         <div class="col-md-3">
-            <div class="panel panel-default">
+            <div class="panel panel-default" id="limits-panel">
                 <div class="panel-heading"><h2 class="panel-title">Limits</h2></div>
                 <div class="panel-body">
                     <table class="table table-condensed">
@@ -62,7 +62,7 @@
             </div>
         </div>
         <div class="col-md-3">
-            <div class="panel panel-default">
+            <div class="panel panel-default" id="turn-order-panel">
                 <div class="panel-heading"><h2 class="panel-title">Turn Order</h2></div>
                 <div class="panel-body">
                     <ol>
@@ -75,7 +75,7 @@
 
     <div class="row">
         <div class="col-md-6">
-            <div class="panel panel-default">
+            <div class="panel panel-default" id="preparation-panel">
                 <div class="panel-heading"><h2 class="panel-title">Preparation</h2></div>
                 <div class="panel-body notes">
                     <p ng-repeat="prep in map.preparation | filter:{players:numPlayers}">
@@ -84,36 +84,25 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="panel panel-default">
+        <div class="col-md-4">
+            <div class="panel panel-default" id="payments-panel">
                 <div class="panel-heading"><h2 class="panel-title">Payments</h2></div>
                 <div class="panel-body">
-                    <table class="table table-condensed">
-                        <thead>
-                        <tr>
-                            <th>Bldg</th><th>E</th>
-                            <th>Bldg</th><th>E</th>
-                            <th>Bldg</th><th>E</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr ng-repeat="idx in [0, 1, 2, 3, 4, 5, 6]">
-                            <th>{{ idx }}</th><td>{{ map.payments[idx] }}</td>
-                            <th>{{ idx + 7 }}</th><td>{{ map.payments[idx+7] }}</td>
-                            <th>{{ idx + 14 }}</th><td>{{ map.payments[idx+14] }}</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <p>
+                      <span ng-repeat="elektro in map.payments">
+                          [<b>{{ $index }}</b>={{ elektro }}]
+                      </span>
+                    </p>
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="panel panel-default">
+        <div class="col-md-2">
+            <div class="panel panel-default" id="restock-panel">
                 <div class="panel-heading"><h2 class="panel-title">Restock</h2></div>
                 <div class="panel-body">
                     <table class="table table-condensed">
                         <thead>
-                        <tr><th>Step</th><th>1</th><th>2</th><th>3</th></tr>
+                        <tr><th>Step</th><th class="col-hdr">1</th><th class="col-hdr">2</th><th class="col-hdr">3</th></tr>
                         </thead>
                         <tbody>
                         <tr>
@@ -150,7 +139,7 @@
 
     <div class="row" ng-if="map.notes">
         <div class="col-md-12">
-            <div class="panel panel-default">
+            <div class="panel panel-default" id="remarks-panel">
                 <div class="panel-heading"><h2 class="panel-title">Remarks &amp; Exceptions</h2></div>
                 <div class="panel-body notes">
                     <p ng-repeat="note in map.notes | filter:{players:numPlayers}">

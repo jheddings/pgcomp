@@ -43,6 +43,10 @@ body {
     font-size: 12px;
 }
 
+td, .col-hdr {
+    text-align: right;
+}
+
 .notes {
     font-size: 10px;
 }
