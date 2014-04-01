@@ -1,0 +1,90 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default" id="title-panel">
+                <div class="panel-body">
+                    Map Name: <input type="text" ng-model="map.name">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default" id="introduction-panel">
+                <div class="panel-heading"><h2 class="panel-title">Introduction</h2></div>
+                <div class="panel-body notes">
+                    <textarea rows="8" cols="80" ng-model="map.overview"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="panel panel-default" id="payments-panel">
+                <div class="panel-heading"><h2 class="panel-title">Payments</h2></div>
+                <div class="panel-body">
+                    <p>
+                      <span ng-repeat="elektro in map.payments">
+                          [<b>{{ $index }}</b>={{ elektro }}]
+                      </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default" id="preparation-panel">
+                <div class="panel-heading"><h2 class="panel-title">Preparation</h2></div>
+                <div class="panel-body notes">
+                    <p ng-repeat="prep in map.preparation | filter:{players:numPlayers}">
+                        {{prep.content}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default" id="limits-panel">
+                <div class="panel-heading"><h2 class="panel-title">Limits</h2></div>
+                <div class="panel-body">
+                    <table class="table table-condensed">
+                        <tr>
+                             <th>Players</th>
+                             <th>Regions</th>
+                             <th>Remove</th>
+                             <th>Max Plants</th>
+                             <th>Step 2</th>
+                             <th>End Game</th>
+                        </tr>
+                         <tr ng-repeat="limit in map.limits">
+                             <th>{{limit.players}}</th>
+                             <td><input type="text" size="3" ng-model="limit.regionsInUse"></td>
+                             <td><input type="text" size="3" ng-model="limit.cardsToRemove"></td>
+                             <td><input type="text" size="3" ng-model="limit.maxPlantsPerPlayer"></td>
+                             <td><input type="text" size="3" ng-model="limit.step2Trigger"></td>
+                             <td><input type="text" size="3" ng-model="limit.endGameTrigger"></td>
+                         </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row" ng-if="map.notes">
+        <div class="col-md-12">
+            <div class="panel panel-default" id="remarks-panel">
+                <div class="panel-heading"><h2 class="panel-title">Remarks &amp; Exceptions</h2></div>
+                <div class="panel-body notes">
+                    <p ng-repeat="note in map.notes | filter:{players:numPlayers}">
+                        <code>Step: {{note.steps}}</code>
+                        {{note.content}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <pre id="json-data">{{map}}</pre>
+</div>

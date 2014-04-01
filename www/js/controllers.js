@@ -24,4 +24,15 @@ angular.module('pgcomp.controllers', [])
         $scope.mapId = mapId;
         $scope.numPlayers = numPlayers;
     }
+])
+
+////////////////////////////////////////////////////////////////////////////////
+.controller('MapEditCtrl', ['$scope', '$routeParams', '$http',
+    function ($scope, $routeParams, $http) {
+        var mapId = $routeParams.mapId;
+
+        $http.get('maps/' + mapId + '.json').success(function (data) {
+            $scope.map = data;
+        });
+    }
 ]);

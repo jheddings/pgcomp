@@ -15,6 +15,12 @@ angular.module('pgcomp', [
         }).
 
         //---------------------------------------------------
+        when('/edit/:mapId', {
+            templateUrl: 'partials/map-edit.html',
+            controller: 'MapEditCtrl'
+        }).
+
+        //---------------------------------------------------
         when('/quickref/:mapId', {
             templateUrl: 'partials/quickref.html',
             controller: 'MapDetailCtrl'
