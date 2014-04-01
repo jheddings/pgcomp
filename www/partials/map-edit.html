@@ -1,5 +1,3 @@
-<!-- TODO turn order -->
-
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -30,6 +28,16 @@
                         [<b>{{ $index }}</b>={{ elektro }}]
                     </span>
                     </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <div class="panel panel-default" id="turn-order-panel">
+                <div class="panel-heading"><h2 class="panel-title">Turn Order</h2></div>
+                <div class="panel-body">
+                    <!-- http://jsfiddle.net/dj_straycat/Q5FWt/3/ -->
+                    <li ng-repeat="turn in map.turnOrder">{{turn}}</li>
                 </div>
             </div>
         </div>
