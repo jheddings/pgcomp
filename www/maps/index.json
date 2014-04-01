@@ -1,57 +1,15 @@
 [
-  {
-    "name": "Australia",
-    "id": "australia"
-  },
-
-  {
-    "name": "Baden-Württemberg",
-    "id": "baden_wuerttemberg"
-  },
-
-  {
-    "name": "Belenux",
-    "id": "benelux"
-  },
-
-  {
-    "name": "Brazil",
-    "id": "brazil"
-  },
-
-  {
-    "name": "Central Europe",
-    "id": "central_europe"
-  },
-
-  {
-    "name": "Germany",
-    "id": "germany"
-  },
-
-  {
-    "name": "Indian Subcontinent",
-    "id": "india"
-  },
-
-  {
-    "name": "Korea",
-    "id": "korea"
-  },
-
-  {
-    "name": "Québec",
-    "id": "quebec"
-  },
-
-  {
-    "name": "Spain & Portugal",
-    "id": "spain_portugal"
-  },
-
-  {
-    "name": "United States",
-    "id": "united_states"
-  }
+  { "name": "Australia", "id": "australia" },
+  { "name": "Baden-Württemberg", "id": "baden_wuerttemberg" },
+  { "name": "Belenux", "id": "benelux" },
+  { "name": "Brazil", "id": "brazil" },
+  { "name": "Central Europe", "id": "central_europe" },
+  { "name": "France", "id": "france" },
+  { "name": "Germany", "id": "germany" },
+  { "name": "Indian Subcontinent", "id": "india" },
+  { "name": "Italy", "id": "italy" },
+  { "name": "Korea", "id": "korea" },
+  { "name": "Québec", "id": "quebec" },
+  { "name": "Spain & Portugal", "id": "spain_portugal" },
+  { "name": "United States", "id": "united_states" }
 ]
-
