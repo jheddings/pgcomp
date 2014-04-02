@@ -8,8 +8,10 @@
   { "name": "Germany", "id": "germany" },
   { "name": "Indian Subcontinent", "id": "india" },
   { "name": "Italy", "id": "italy" },
+  { "name": "Japan", "id": "japan" },
   { "name": "Korea", "id": "korea" },
   { "name": "Québec", "id": "quebec" },
+  { "name": "Russia", "id": "russia" },
   { "name": "Spain & Portugal", "id": "spain_portugal" },
   { "name": "United States", "id": "united_states" }
 ]

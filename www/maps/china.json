@@ -1,0 +1,228 @@
+{
+  "name": "China",
+  "id": "china",
+  "overview": "The Chinese economy is structured as a planned economy. In this version of the game, there are no surprises. The power plants on the power plant market are offered in ascending order during thefirst two steps of the game. Additionally the resource table is designed such that resources are likely to be in short supply as the game proceeds. Thus, players must plan their resource needs very carefully or find their grid dark and their incomes reduced.",
+  "limits": [
+    {
+      "players": 2,
+      "regionsInUse": 3,
+      "maxPlantsPerPlayer": 4,
+      "cardsToRemove": 8,
+      "step2Trigger": 10,
+      "endGameTrigger": 21
+    },
+    {
+      "players": 3,
+      "regionsInUse": 3,
+      "maxPlantsPerPlayer": 3,
+      "cardsToRemove": 8,
+      "step2Trigger": 7,
+      "endGameTrigger": 17
+    },
+    {
+      "players": 4,
+      "regionsInUse": 4,
+      "maxPlantsPerPlayer": 3,
+      "cardsToRemove": 4,
+      "step2Trigger": 7,
+      "endGameTrigger": 17
+    },
+    {
+      "players": 5,
+      "regionsInUse": 5,
+      "maxPlantsPerPlayer": 3,
+      "cardsToRemove": 0,
+      "step2Trigger": 7,
+      "endGameTrigger": 15
+    },
+    {
+      "players": 6,
+      "regionsInUse": 6,
+      "maxPlantsPerPlayer": 3,
+      "cardsToRemove": 0,
+      "step2Trigger": 6,
+      "endGameTrigger": 14
+    }
+  ],
+  "preparation": [
+    {
+      "players": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content": "Depending on the number of players, remove the following power plants from the game and place them in the box:"
+    }
+  ],
+  "turnOrder": [
+    "Determine order",
+    "Buy power plant",
+    "Buy resources",
+    "Build cities",
+    "Bureaucracy"
+  ],
+  "payments": [
+    10,
+    22,
+    33,
+    44,
+    54,
+    64,
+    73,
+    82,
+    90,
+    98,
+    105,
+    112,
+    118,
+    124,
+    129,
+    134,
+    138,
+    142,
+    145,
+    148,
+    150
+  ],
+  "restock": [
+    {
+      "players": 2,
+      "step": 1,
+      "coal": "4",
+      "oil": "2",
+      "trash": "2",
+      "nuke": "1"
+    },
+    {
+      "players": 2,
+      "step": 2,
+      "coal": "4",
+      "oil": "2",
+      "trash": "2",
+      "nuke": "1"
+    },
+    {
+      "players": 2,
+      "step": 3,
+      "coal": "3",
+      "oil": "4",
+      "trash": "1",
+      "nuke": "1"
+    },
+    {
+      "players": 3,
+      "step": 1,
+      "coal": "5",
+      "oil": "3",
+      "trash": "2",
+      "nuke": "1"
+    },
+    {
+      "players": 3,
+      "step": 2,
+      "coal": "5",
+      "oil": "3",
+      "trash": "2",
+      "nuke": "1"
+    },
+    {
+      "players": 3,
+      "step": 3,
+      "coal": "3",
+      "oil": "4",
+      "trash": "1",
+      "nuke": "1"
+    },
+    {
+      "players": 4,
+      "step": 1,
+      "coal": "6",
+      "oil": "4",
+      "trash": "3",
+      "nuke": "2"
+    },
+    {
+      "players": 4,
+      "step": 2,
+      "coal": "6",
+      "oil": "4",
+      "trash": "3",
+      "nuke": "2"
+    },
+    {
+      "players": 4,
+      "step": 3,
+      "coal": "4",
+      "oil": "5",
+      "trash": "2",
+      "nuke": "2"
+    },
+    {
+      "players": 5,
+      "step": 1,
+      "coal": "7",
+      "oil": "5",
+      "trash": "3",
+      "nuke": "3"
+    },
+    {
+      "players": 5,
+      "step": 2,
+      "coal": "7",
+      "oil": "5",
+      "trash": "3",
+      "nuke": "3"
+    },
+    {
+      "players": 5,
+      "step": 3,
+      "coal": "5",
+      "oil": "6",
+      "trash": "3",
+      "nuke": "2"
+    },
+    {
+      "players": 6,
+      "step": 1,
+      "coal": "9",
+      "oil": "6",
+      "trash": "5",
+      "nuke": "3"
+    },
+    {
+      "players": 6,
+      "step": 2,
+      "coal": "9",
+      "oil": "6",
+      "trash": "5",
+      "nuke": "3"
+    },
+    {
+      "players": 6,
+      "step": 3,
+      "coal": "6",
+      "oil": "7",
+      "trash": "3",
+      "nuke": "3"
+    }
+  ],
+  "notes": [
+    {
+      "players": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "steps": [
+        1,
+        2,
+        3
+      ],
+      "content": "In this version, there is no future power plant market. All power plants are always placed and available in the current market."
+    }
+  ]
+}
